@@ -1,0 +1,37 @@
+<div class="column">
+  <div class="row">
+    <form [formGroup]="addProductForm">
+      <p layout="column" layout-align="center end">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input formControlName="Name" matInput type="text" />
+        </mat-form-field>
+      </p>
+      <p layout="column" layout-align="center end">
+        <mat-form-field>
+          <mat-label>Brand</mat-label>
+          <input formControlName="Brand" matInput type="text" />
+        </mat-form-field>
+      </p>
+      <p layout="column" layout-align="center end">
+        <mat-form-field>
+          <mat-label>ModelNumber</mat-label>
+          <input formControlName="ModelNumber" matInput type="text" />
+        </mat-form-field>
+      </p>
+      <p layout="column" layout-align="center end">
+        <mat-form-field>
+          <mat-label>Available Quantity</mat-label>
+          <input formControlName="AvailableQuantity" matInput type="number" />
+        </mat-form-field>
+      </p>
+      <p layout="column" layout-align="center end">
+        <mat-form-field>
+          <mat-label>Price</mat-label>
+          <input formControlName="Price" matInput type="number" />
+        </mat-form-field>
+      </p>
+      <button mat-raised-button (click)="onSaveProductDetails()">Submit</button>
+    </form>
+  </div>
+</div>

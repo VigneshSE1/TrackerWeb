@@ -1,0 +1,37 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+.userName {
+  font-size: 1em;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.menubar-title {
+  margin-left: 0.5em;
+  font-weight: 500 !important;
+  font-size: 0.8em !important;
+}
+.versionWithRefresh {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  padding: 1em;
+  align-items: center;
+}
+.sidenavigator {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}

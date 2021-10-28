@@ -1,0 +1,39 @@
+<div class="column">
+  <div class="row">
+    <form [formGroup]="addCustomerForm">
+      <p layout="column" layout-align="center end">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input formControlName="Name" matInput type="text" />
+        </mat-form-field>
+      </p>
+      <p layout="column" layout-align="center end">
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input formControlName="Address" matInput type="text" />
+        </mat-form-field>
+      </p>
+      <p layout="column" layout-align="center end">
+        <mat-form-field>
+          <mat-label>Pincode</mat-label>
+          <input formControlName="Pincode" matInput type="number" />
+        </mat-form-field>
+      </p>
+      <p layout="column" layout-align="center end">
+        <mat-form-field>
+          <mat-label>Email Id</mat-label>
+          <input formControlName="EmailId" matInput type="email" />
+        </mat-form-field>
+      </p>
+      <p layout="column" layout-align="center end">
+        <mat-form-field>
+          <mat-label>Mobile Number</mat-label>
+          <input formControlName="MobileNumber" matInput type="number" />
+        </mat-form-field>
+      </p>
+      <button mat-raised-button (click)="onSaveCustomerDetails()">
+        Add User
+      </button>
+    </form>
+  </div>
+</div>
