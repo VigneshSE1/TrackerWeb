@@ -8,7 +8,9 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
 
-  baseUrl = 'https://changefeed-webapi.azurewebsites.net/api/';
+  // baseUrl = 'https://changefeed-webapi.azurewebsites.net/api/';
+  baseUrl = 'https://localhost:5001/api/';
+
 
   saveProductUrl = this.baseUrl + 'Product/addOrUpdate';
   getProductbyIdUrl = this.baseUrl + 'Product/'

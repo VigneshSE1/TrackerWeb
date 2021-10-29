@@ -41,6 +41,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTableModule } from '@angular/material/table'
 import { HttpClientModule } from '@angular/common/http';
 import { OrdersComponent } from './orders/orders.component';
+import { ModalComponent } from './modal/modal.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +51,9 @@ import { OrdersComponent } from './orders/orders.component';
     DashboardComponent,
     CreateUserComponent,
     EditProductComponent,
-    OrdersComponent
+    OrdersComponent,
+    ModalComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     AppRoutingModule,

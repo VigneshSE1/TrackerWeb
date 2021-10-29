@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-create-user',
@@ -9,7 +10,7 @@ import { AbstractControl, FormBuilder, FormGroup, FormControl } from '@angular/f
 export class CreateUserComponent implements OnInit {
 
   addCustomerForm: FormGroup;
-  constructor(private formBuilder: FormBuilder,) { }
+  constructor(private formBuilder: FormBuilder, private api: ApiService) { }
 
   ngOnInit(): void {
     this.addCustomerForm = this.formBuilder.group({
@@ -24,6 +25,10 @@ export class CreateUserComponent implements OnInit {
     return this.addCustomerForm.controls;
   }
   onSaveCustomerDetails(): void {
-    console.log(this.addCustomerForm.value);
+    this.api.saveCustomer(this.addCustomerForm.value).subscribe((res) => {
+      console.log(res);
+    }, (err) => {
+      console.log(err)
+    })
   }
 }

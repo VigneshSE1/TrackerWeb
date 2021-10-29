@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-create-product',
@@ -9,7 +10,7 @@ import { AbstractControl, FormBuilder, FormGroup, FormControl } from '@angular/f
 export class CreateProductComponent implements OnInit {
 
   addProductForm: FormGroup;
-  constructor(private formBuilder: FormBuilder,) { }
+  constructor(private formBuilder: FormBuilder, private api: ApiService) { }
 
   ngOnInit(): void {
     this.addProductForm = this.formBuilder.group({
@@ -24,6 +25,11 @@ export class CreateProductComponent implements OnInit {
     return this.addProductForm.controls;
   }
   onSaveProductDetails(): void {
-    console.log(this.addProductForm.value);
+    this.api.saveProduct(this.addProductForm.value).subscribe((res) => {
+      console.log(res);
+      this.addProductForm.reset();
+    }, (err) => {
+      console.log(err);
+    })
   }
 }
